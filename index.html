@@ -1,140 +1,150 @@
-<script src=pixicon.js></script>
-<style>
-    * {
-        font: 14px Segoe UI, Trebuchet MS, Tahoma, sans-serif
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pixicon</title>
 
-    body {
-        margin: 0;
-        height: 100%;
-        background: #36393E;
-        background-image: radial-gradient(#B59D7E77, #36393E);
-        background-size: 4px;
-        text-align: center;
-    }
+    <script src=pixicon.js></script>
+    <style>
+        * {
+            font: 14px Segoe UI, Trebuchet MS, Tahoma, sans-serif
+        }
 
-    div#p {
-        width: 617px;
-        margin-right: 3px
-    }
+        body {
+            margin: 0;
+            height: 100%;
+            background: #36393E;
+            background-image: radial-gradient(#B59D7E77, #36393E);
+            background-size: 4px;
+            text-align: center;
+        }
 
-    div#p2 {
-        width: 334px
-    }
+        div#p {
+            width: 617px;
+            margin-right: 3px
+        }
 
-    div#u, div#uu {
-        margin: 0px;
-        box-shadow: 2px 2px 20px #232427;
-        border-radius: 4px;
-        padding: 8px;
-        display: inline-flex;
-        background: #5B616A;
-        margin-top: 32px
-    }
+        div#p2 {
+            width: 334px
+        }
 
-    div#u2 {
-        margin: 0px;
-        box-shadow: 2px 2px 20px #232427;
-        border-radius: 0 0 4px 4px;
-        padding: 16px;
-        background: #FBF5F5;
-        width: 640px;
-        margin: auto;
-    }
+        div#u, div#uu {
+            margin: 0px;
+            box-shadow: 2px 2px 20px #232427;
+            border-radius: 4px;
+            padding: 8px;
+            display: inline-flex;
+            background: #5B616A;
+            margin-top: 32px
+        }
 
-    input, button {
-        text-shadow: 0.6px 0.6px 0px #FFF;
-        border-radius: 2px;
-        margin: 3px;
-        padding: 2px;
-        outline: none;
-        width: 612px;
-        color: #555;
-        text-align: center;
-        border: none;
-        background: #F2EDED;
-        margin-top: 4px;
-        height: 32px;
-        box-shadow: 1px 1px 3px #232427;
-    }
+        div#u2 {
+            margin: 0px;
+            box-shadow: 2px 2px 20px #232427;
+            border-radius: 0 0 4px 4px;
+            padding: 16px;
+            background: #FBF5F5;
+            width: 640px;
+            margin: auto;
+        }
 
-    input {
-        width: 328px
-    }
+        input, button {
+            text-shadow: 0.6px 0.6px 0px #FFF;
+            border-radius: 2px;
+            margin: 3px;
+            padding: 2px;
+            outline: none;
+            width: 612px;
+            color: #555;
+            text-align: center;
+            border: none;
+            background: #F2EDED;
+            margin-top: 4px;
+            height: 32px;
+            box-shadow: 1px 1px 3px #232427;
+        }
 
-    input:hover, button:hover {
-        background: #D0D2D7
-    }
+        input {
+            width: 328px
+        }
 
-    button:active, input:focus {
-        background: #C7C9CF;
-    }
+        input:hover, button:hover {
+            background: #D0D2D7
+        }
 
-    button:active {
-        cursor: pointer;
-    }
+        button:active, input:focus {
+            background: #C7C9CF;
+        }
 
-    canvas {
-        border-radius: 2px;
-        box-shadow: 1px 1px 3px #232427;
-        background: #FBF5F5;
-        margin: 2px;
-        padding: 3px;
-        border: 1px solid #EAEAEA;
-        transition: opacity .25s ease-in-out;
-        widtha: 24px;
-        heighta: 24px;
+        button:active {
+            cursor: pointer;
+        }
 
-    }
+        canvas {
+            border-radius: 2px;
+            box-shadow: 1px 1px 3px #232427;
+            background: #FBF5F5;
+            margin: 2px;
+            padding: 3px;
+            border: 1px solid #EAEAEA;
+            transition: opacity .25s ease-in-out;
+            widtha: 24px;
+            heighta: 24px;
 
-    canvas:hover {
-        background: #EEE;
-        cursor: pointer;
-    }
+        }
 
-    canvas:active {
-        opacity: 0.5;
-    }
+        canvas:hover {
+            background: #EEE;
+            cursor: pointer;
+        }
 
-    hr {
-        border: 0;
-        border-bottom: 1px solid #AAA;
-        margin: 8px;
-        padding: 0;
-    }
+        canvas:active {
+            opacity: 0.5;
+        }
 
-    em {
-        font-style: italic;
-    }
+        hr {
+            border: 0;
+            border-bottom: 1px solid #AAA;
+            margin: 8px;
+            padding: 0;
+        }
 
-    * {
-        transition: opacity .25s ease-in-out;
-    }
+        em {
+            font-style: italic;
+        }
 
-    canvas#q {
-        padding: 11px 9.5px;
-        width: 308px;
-        height: 308px;
-    }
+        * {
+            transition: opacity .25s ease-in-out;
+        }
 
-    /* multiples of 8 only! */
-    .info b {
-        font: bold 32px consolas;
-        margin-bottom: 4px;
-    }
+        canvas#q {
+            padding: 11px 9.5px;
+            width: 308px;
+            height: 308px;
+        }
 
-    .info {
-        text-align: left;
-    }
+        /* multiples of 8 only! */
+        .info b {
+            font: bold 32px consolas;
+            margin-bottom: 4px;
+        }
 
-    a {
-        color: crimson
-    }
+        .info {
+            text-align: left;
+        }
 
-    #m0de {
-        margin-bottom: 6px;
-    }
-</style>
+        a {
+            color: crimson
+        }
+
+        #m0de {
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+
 <div>
     <div id=u>
         <div id=p>
@@ -356,3 +366,5 @@
         if (i === cnt - 1) more(), document.querySelector("button").onclick = more;
     }
 </script>
+</body>
+</html>
