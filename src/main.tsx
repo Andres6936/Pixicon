@@ -9,6 +9,7 @@ import "./styles.css";
 const Canvas = () => {
   const ref = React.useRef<HTMLCanvasElement | null>(null);
 
+  const [spawnTriangles, setSpawnTriangles] = React.useState(false);
   const [withInterval, setWithInterval] = React.useState(true);
   const [value, setValue] = React.useState<string>(
     wJ() + wJ() + wJ() + wJ() + wJ() + wJ(),
@@ -31,7 +32,7 @@ const Canvas = () => {
 
   React.useEffect(() => {
     if (!ref.current) return;
-    pixicon(ref.current, 28, hash(arst(value)), pixi);
+    pixicon(ref.current, 28, hash(arst(value)), spawnTriangles);
   }, [ref, value]);
 
   return (
@@ -73,6 +74,9 @@ const Canvas = () => {
           )}
           type="checkbox"
           role="switch"
+          onChange={({ currentTarget }) =>
+            setSpawnTriangles(currentTarget.checked)
+          }
         />
         On - Spawn triangles (Default: Pixels)
       </label>
