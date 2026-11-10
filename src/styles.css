@@ -1,6 +1,6 @@
 @import "@master/css";
 
-:root {
+@theme {
     --size-canvas: 308px;
 }
 
