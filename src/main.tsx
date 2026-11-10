@@ -37,7 +37,13 @@ const Canvas = () => {
 
   return (
     <div className="flex grow(1) h-full w-full flex-col justify-center items-center">
-      <canvas ref={ref} id="q" width={308} height={308}></canvas>
+      <canvas
+        onClick={() => setWithInterval((prev) => !prev)}
+        ref={ref}
+        id="q"
+        width={308}
+        height={308}
+      ></canvas>
       <input
         onFocus={() => setWithInterval(false)}
         value={value}
