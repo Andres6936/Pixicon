@@ -1,0 +1,134 @@
+@import "@master/css";
+
+:root {
+    --size-canvas: 308px;
+}
+
+body,
+#root {
+    width: 100vw;
+    height: 100vh;
+    font:
+        14px Segoe UI,
+        Trebuchet MS,
+        Tahoma,
+        sans-serif;
+    margin: 0;
+    background: #36393e;
+    background-image: radial-gradient(#b59d7e77, #36393e);
+    background-size: 4px;
+}
+
+div#p {
+    width: 617px;
+    margin-right: 3px;
+}
+
+div#p2 {
+    width: 334px;
+}
+
+div#u,
+div#uu {
+    margin: 0px;
+    box-shadow: 2px 2px 20px #232427;
+    border-radius: 4px;
+    padding: 8px;
+    display: inline-flex;
+    background: #5b616a;
+    margin-top: 32px;
+}
+
+div#u2 {
+    margin: 0px;
+    box-shadow: 2px 2px 20px #232427;
+    border-radius: 0 0 4px 4px;
+    padding: 16px;
+    background: #fbf5f5;
+    width: 640px;
+    margin: auto;
+}
+
+input,
+button {
+    text-shadow: 0.6px 0.6px 0px #fff;
+    border-radius: 2px;
+    margin: 3px;
+    padding: 2px;
+    outline: none;
+    color: #555;
+    text-align: center;
+    border: none;
+    background: #f2eded;
+    margin-top: 4px;
+    height: 32px;
+    box-shadow: 1px 1px 3px #232427;
+}
+
+input:hover,
+button:hover {
+    background: #d0d2d7;
+}
+
+button:active,
+input:focus {
+    background: #c7c9cf;
+}
+
+button:active {
+    cursor: pointer;
+}
+
+canvas {
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px #232427;
+    background: #fbf5f5;
+    margin: 2px;
+    padding: 3px;
+    border: 1px solid #eaeaea;
+    transition: opacity 0.25s ease-in-out;
+}
+
+canvas:hover {
+    background: #eee;
+    cursor: pointer;
+}
+
+canvas:active {
+    opacity: 0.5;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid #aaa;
+    margin: 8px;
+    padding: 0;
+}
+
+em {
+    font-style: italic;
+}
+
+canvas#q {
+    padding: 11px 9.5px;
+    width: 308px;
+    height: 308px;
+}
+
+/* multiples of 8 only! */
+.info b {
+    font: bold 32px consolas;
+    margin-bottom: 4px;
+}
+
+.info {
+    text-align: left;
+}
+
+a {
+    color: crimson;
+}
+
+#m0de {
+    margin-bottom: 6px;
+}
