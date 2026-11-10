@@ -86,6 +86,7 @@ const Canvas = () => {
         />
         On - Spawn triangles (Default: Pixels)
       </label>
+      <p>Click the icon to pause/start the random spawn.</p>
       <Message />
     </div>
   );
@@ -101,9 +102,7 @@ const Message = () => {
       An experimental hashicon generator. Designed to produce highly identifable
       icons with as many different results as possible. It is a WIP, still
       looking into better pattern/color generation methods and different shapes.
-      The code is also a bit unoptimized and longer than it could be. Click any
-      small icon to load it into the big one. Click the big icon to pause/start
-      the random marquee.
+      The code is also a bit unoptimized and longer than it could be.
     </div>
   );
 };
