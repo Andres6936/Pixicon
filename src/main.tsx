@@ -114,7 +114,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 );
 
 function wJ() {
-  return Math.random().toString(36).substr(2, 4);
+  return Math.random().toString(36).substring(2, 6);
 }
 
 function arst(a) {
