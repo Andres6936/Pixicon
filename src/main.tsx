@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { pixicon } from "@internal/pixicon";
 import { cn } from "cn";
 
-import { pixicon } from "./pixicon";
 import { hash } from "./hash";
 import "./styles.css";
 

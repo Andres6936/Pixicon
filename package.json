@@ -3,12 +3,16 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@internal/pixicon": "workspace:*",
     "@master/css": "^2.1.1",
     "cn": "^0.5.2",
     "react": "18.2.0",

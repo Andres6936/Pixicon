@@ -5,6 +5,7 @@
     "": {
       "name": "@adan/pixicon",
       "dependencies": {
+        "@internal/pixicon": "workspace:*",
         "@master/css": "^2.1.1",
         "cn": "^0.5.2",
         "react": "18.2.0",
@@ -20,9 +21,20 @@
         "vite": "^8.3.7",
       },
     },
+    "packages/pixicon": {
+      "name": "@internal/pixicon",
+      "devDependencies": {
+        "@types/bun": "latest",
+      },
+      "peerDependencies": {
+        "typescript": "^6 | ^7",
+      },
+    },
   },
   "packages": {
     "@eslint/css-tree": ["@eslint/css-tree@4.1.2", "", { "dependencies": { "mdn-data": "2.37.2", "source-map-js": "^1.2.1" } }, "sha512-rVcxLmwSkEL3aWS3vAgsTRrQHoYE1b0XcgDtKHDJ92XOkyUpcbS/g0tUJKhvCtlEhYzgKBWsgDd+Z/aPhd166w=="],
+
+    "@internal/pixicon": ["@internal/pixicon@workspace:packages/pixicon"],
 
     "@jridgewell/sourcemap-codec": ["@jridgewell/sourcemap-codec@1.6.0", "", {}, "sha512-T7jf+5zgsZHwNJ4lvQ7/aezbyk0nNX+zJVWpmHA7VYsEx7a7qr5Rg5IbtJFqkgze5Y2sruq1RUY8Q837Od7iFw=="],
 
