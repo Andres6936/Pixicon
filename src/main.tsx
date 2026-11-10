@@ -7,6 +7,8 @@ import "./styles.css";
 
 const Canvas = () => {
   const ref = React.useRef<HTMLCanvasElement | null>(null);
+
+  const [withInterval, setWithInterval] = React.useState(true);
   const [value, setValue] = React.useState<string>(
     wJ() + wJ() + wJ() + wJ() + wJ() + wJ(),
   );
@@ -16,63 +18,39 @@ const Canvas = () => {
   };
 
   React.useEffect(() => {
+    if (!withInterval) return;
+    const intervalId = setInterval(() => {
+      setValue(wJ() + wJ() + wJ() + wJ() + wJ() + wJ());
+    }, 500);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [withInterval]);
+
+  React.useEffect(() => {
     if (!ref.current) return;
     pixicon(ref.current, 28, hash(arst(value)), pixi);
-
-    //     document.querySelector("input").oninput = function () {
-    //       pixicon(
-    //         document.querySelector("canvas#q"),
-    //         28,
-    //         hash(arst(this.value)),
-    //         pixi,
-    //       );
-    //     };
-    //     document.querySelector("input").onfocus = function () {
-    //       qactive = false;
-    //     };
-    //     document.querySelector("canvas#q").onclick = function () {
-    //       qactive = !qactive;
-    //     };
-    //     var wat,
-    //       qactive = true;
-    //
-    //     function startThing() {
-    //       wat = setInterval(function () {
-    //         if (qactive) {
-    //           var str = wJ() + wJ() + wJ() + wJ() + wJ() + wJ();
-    //           //console.log(str);
-    //           pixicon(
-    //             document.querySelector("canvas#q"),
-    //             28,
-    //             hash(arst(str)),
-    //             pixi,
-    //           );
-    //           document.querySelector("input").value = str;
-    //         }
-    //       }, 500);
-    //     }
-    //
-    //     startThing();
-    //     for (var cnt = 66, cnv = [], i = 0; i < cnt; i++) {
-    //       var c = document.createElement("canvas");
-    //       cnv.push(c);
-    //       document.querySelector("div#o").appendChild(c);
-    //       if (i === cnt - 1)
-    //         (more(), (document.querySelector("button").onclick = more));
-    //     }
   }, [ref, value]);
 
   return (
     <div className="flex grow(1) h-full w-full flex-col justify-center items-center">
       <canvas ref={ref} id="q" width={308} height={308}></canvas>
       <input
+        onFocus={() => setWithInterval(false)}
         value={value}
         onChange={({ currentTarget }) => setValue(currentTarget.value)}
         type="text"
         placeholder="Type something here"
         className="(width:var(--size-canvas))"
       />
-      <button onClick={onGenerate} className="(width:var(--size-canvas))">
+      <button
+        onClick={() => {
+          onGenerate();
+          setWithInterval(false);
+        }}
+        className="(width:var(--size-canvas))"
+      >
         Generate more
       </button>
       <Message />
@@ -115,21 +93,4 @@ function arst(a) {
         return a[i].charCodeAt();
       })
     : String.fromCharCode.apply(0, a);
-}
-
-function more() {
-  for (var i = 0; i < cnt; i++) {
-    var str = wJ() + wJ() + wJ() + wJ() + wJ() + wJ();
-    cnv[i].id = "p";
-    cnv[i].title = str;
-    pixicon(cnv[i], 4, hash(arst(str)), pixi);
-
-    cnv[i].onclick = function () {
-      //pixicon(document.querySelector("canvas#q"),23, hash(arst(this.title)), pixi);
-      qactive = false;
-      document.querySelector("input").value = this.title;
-      document.querySelector("input").dispatchEvent(new Event("input"));
-      document.querySelector("canvas#q");
-    };
-  }
 }
