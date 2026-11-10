@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { cn } from "cn";
 
 import { pixicon } from "./pixicon";
 import { hash } from "./hash";
@@ -53,6 +54,28 @@ const Canvas = () => {
       >
         Generate more
       </button>
+      <label
+        htmlFor="switch"
+        className="flex flex-row items-center (gap:0.5em)"
+      >
+        Swap Triangles
+        <input
+          id="switch"
+          className={cn(
+            // Base styles
+            "(appearance:none) inline-block (height:var(--height)) (width:calc(var(--height)*calc(1+var(--width)))) (background-color:#e5e5e5) (border:0) (border-radius:99em)",
+            // After styles
+            "(content:'')::after block::after (aspect-ratio:1)::after h-full::after (border-radius:50%)::after (background-color:white)::after (border:max(2px,0.125em)_solid_#808080)::after",
+            // Checked styles
+            "(background-color:#0088cc):checked (border-color:#0088cc):checked::after (translate:calc(var(--height)*var(--width))_0):checked::after",
+            // Animations
+            "(transition:background-color_100ms_ease-in-out) (transition:translate_100ms_ease-in-out)::after",
+          )}
+          type="checkbox"
+          role="switch"
+        />
+        Swap Pixels
+      </label>
       <Message />
     </div>
   );
