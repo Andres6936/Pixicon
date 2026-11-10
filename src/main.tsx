@@ -114,8 +114,6 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   </React.StrictMode>,
 );
 
-var pixi = document.location.search == "?alt" ? true : false;
-
 function wJ() {
   return Math.random().toString(36).substr(2, 4);
 }
