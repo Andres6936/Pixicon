@@ -19,36 +19,6 @@ body,
     background-size: 4px;
 }
 
-div#p {
-    width: 617px;
-    margin-right: 3px;
-}
-
-div#p2 {
-    width: 334px;
-}
-
-div#u,
-div#uu {
-    margin: 0px;
-    box-shadow: 2px 2px 20px #232427;
-    border-radius: 4px;
-    padding: 8px;
-    display: inline-flex;
-    background: #5b616a;
-    margin-top: 32px;
-}
-
-div#u2 {
-    margin: 0px;
-    box-shadow: 2px 2px 20px #232427;
-    border-radius: 0 0 4px 4px;
-    padding: 16px;
-    background: #fbf5f5;
-    width: 640px;
-    margin: auto;
-}
-
 input,
 button {
     text-shadow: 0.6px 0.6px 0px #fff;
@@ -73,10 +43,6 @@ button:hover {
 button:active,
 input:focus {
     background: #c7c9cf;
-}
-
-button:active {
-    cursor: pointer;
 }
 
 canvas {
