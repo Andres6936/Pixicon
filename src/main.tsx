@@ -56,9 +56,9 @@ const Canvas = () => {
       </button>
       <label
         htmlFor="switch"
-        className="flex flex-row items-center (gap:0.5em)"
+        className="flex flex-row items-center (gap:0.5em) (padding:0.5em)"
       >
-        Swap Triangles
+        Off
         <input
           id="switch"
           className={cn(
@@ -74,7 +74,7 @@ const Canvas = () => {
           type="checkbox"
           role="switch"
         />
-        Swap Pixels
+        On - Spawn triangles (Default: Pixels)
       </label>
       <Message />
     </div>
@@ -91,9 +91,9 @@ const Message = () => {
       An experimental hashicon generator. Designed to produce highly identifable
       icons with as many different results as possible. It is a WIP, still
       looking into better pattern/color generation methods and different shapes.
-      The code is also a bit unoptimized and longer than it could be. Click{" "}
-      <a>here</a> to swap pixels or triangles. Click any small icon to load it
-      into the big one. Click the big icon to pause/start the random marquee.
+      The code is also a bit unoptimized and longer than it could be. Click any
+      small icon to load it into the big one. Click the big icon to pause/start
+      the random marquee.
     </div>
   );
 };
