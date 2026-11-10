@@ -11,6 +11,10 @@ const Canvas = () => {
     wJ() + wJ() + wJ() + wJ() + wJ() + wJ(),
   );
 
+  const onGenerate = () => {
+    setValue(wJ() + wJ() + wJ() + wJ() + wJ() + wJ());
+  };
+
   React.useEffect(() => {
     if (!ref.current) return;
     pixicon(ref.current, 28, hash(arst(value)), pixi);
@@ -56,7 +60,7 @@ const Canvas = () => {
     //       if (i === cnt - 1)
     //         (more(), (document.querySelector("button").onclick = more));
     //     }
-  }, [ref]);
+  }, [ref, value]);
 
   return (
     <div className="flex grow(1) h-full w-full flex-col justify-center items-center">
@@ -68,7 +72,9 @@ const Canvas = () => {
         placeholder="Type something here"
         className="(width:var(--size-canvas))"
       />
-      <button className="(width:var(--size-canvas))">Generate more</button>
+      <button onClick={onGenerate} className="(width:var(--size-canvas))">
+        Generate more
+      </button>
       <Message />
     </div>
   );
