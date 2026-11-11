@@ -1,9 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { pixicon } from "@internal/pixicon";
+import { pixicon, hash } from "@internal/pixicon";
 import { cn } from "cn";
 
-import { hash } from "./hash";
 import "./styles.css";
 
 const Canvas = () => {

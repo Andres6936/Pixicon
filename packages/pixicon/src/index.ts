@@ -1,3 +1,5 @@
+export {hash} from "./hash"
+
 /*
     pixicon: a sexy hashicon generator (work in progress)
     by @bryc (github.com/bryc)
