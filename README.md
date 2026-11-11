@@ -9,3 +9,7 @@ The code is also a bit unoptimized and longer than it could be.
 
 ![Hash-Andres6936](./docs/hash-1.png)
 ![Hash-andres6936](./docs/hash-2.png)
+
+### Credits
+
+- [bryc](https://github.com/bryc/pixicon) - the original code, this project is fork made with React + Vite
